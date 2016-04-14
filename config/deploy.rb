@@ -1,6 +1,6 @@
 server 'projectamiga.diegodillenburg.com', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@github.com/diegodillenburg/atom-heart-mother'
+set :repo_url,        'git@github.com/diegodillenburg/atom-heart-mother.git'
 set :application,     'atom-heart-mother'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
