@@ -72,8 +72,10 @@ namespace :deploy do
   end
 
   desc 'Symlinks secrets.yml'
-  task :symlink_config, roles: :app do
-    run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
+  task :symlink_config do
+    on roles(:app) do
+      execute "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
+    end
   end
 
   before :starting,     :check_revision
