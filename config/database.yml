@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: projectamiga
-  username: projectamiga
+  username: deploy
   password: <%= ENV['PROJECTAMIGA_DATABASE_PASSWORD'] %>
